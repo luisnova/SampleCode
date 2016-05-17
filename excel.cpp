@@ -1,4 +1,4 @@
-// excel index
+// calculate excel column index
 // gcc excel.c -lm -ggdb
 // gdb --args executablename arg1 arg2
 
