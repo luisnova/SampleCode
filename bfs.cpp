@@ -111,8 +111,8 @@ void Bin_tree::BFS()
     }
     if (node->right != NULL)
     {
-      Q.enqueue(node.right) 
-      cout << node->right.value << " \n";
+      Q.enqueue(node->right) 
+      cout << node->right->value << " \n";
     }
   }
   cout << endl;
