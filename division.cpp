@@ -13,27 +13,27 @@ int main(int argc, const char* argv[])
        exit(0);
     }
 
-    int x, xi;
-    int y;
+    int x, x_original;
+    int divisor;
     int result = 0;
-    int tmp;
-    int sh = sizeof(unsigned) * 8;
+    int temp;
+    int shift = sizeof(unsigned) * 8;
 	
-    x = xi = atoi( argv[1] );
-    y = atoi( argv[2] );
+    x = x_original = atoi( argv[1] );
+    divisor = atoi( argv[2] );
 
-    while (sh > 0)
+    while (shift > 0)
     {
-        sh--;
+        shift--;
 
-        tmp = x >> sh;
+        temp = x >> shift;
         result = result << 1;
-        if (tmp >= y)
+        if (temp >= divisor)
         {
             result += 1;
-            x -= y << sh;
+            x -= divisor << shift;
         }
     }
 
-    printf("x: %i, y: %i, x/y: %i\n", xi, y, result);
+    printf("x: %i, y: %i, x/y: %i\n", x_original, divisor, result);
 }
